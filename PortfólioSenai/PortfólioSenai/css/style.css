@@ -1,0 +1,61 @@
+/*#011638 texto*/
+/*#364156 detalhe*/
+/*FFFFFF fundo*/
+/*E2B4BD destaque*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    header {
+        background-color: #98B9F2;
+        color: #011638;
+        padding: 24px;
+        
+    }
+
+    main {
+        width: 900px;
+        max-width: 500 px;
+        margin: 0 auto;
+        padding: 16px;
+    }
+
+    nav {
+        text-decoration: none;
+        color: #394053;
+    }
+
+    nav:hover {
+        color: #011638;
+        padding: 8 px 12px;
+        border-radius: 6px;
+        list-style: none;
+    }
+
+    nav a:link, nav a:visited{
+        display: inline-block;
+    }
+
+    footer {
+        background-color: #98B9F2;
+    }
+}
