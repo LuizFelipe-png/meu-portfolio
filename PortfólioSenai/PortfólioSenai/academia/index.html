@@ -1,41 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academia Movimente-se</title>
 </head>
+
 <body>
-    <h1>Bem-vindo a Academia Movimenta-se</h1>
-    <h2>Escolha o Plano:</h2>
-        <input type="radio" id="mensal" name="mensal" value="mensal" required>
-        <label for="mensal">Mensal</label>
-        <br>
+    <main>
+        <section>
+            <h3>Bem-vindo a Academia Movimenta-se</h3>
+            <form action="#">
+                <fieldset>
+                    <h3>Dados pessoais:</h3>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" value="" required>
+                    <br><br>
 
-        <input type="radio" id="trimestral" name="trimestral" value="trimestral" required>
-        <label for="trimestral">Trimestral</label>
-        <br>
+                    <label for="cpf">CPF:</label>
+                    <input type="number" id="cpf" value="cpf" required pattern="[0-9]{11}">
+                    <br><br>
+                    
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" value="" required>
+                    <br><br>
 
-        <input type="radio" id="anual" name="anual" value="anual" required>
-        <label for="anual">Anual</label>
-        <br>
+                    <label for="dataNascimento">Data de Nascimento:</label>
+                    <input type="date" id="dataNascimento" value="dataNascimento" required>
+                    <br><br>
 
-        <h2>Modalidades:</h2>
-        <input type="checkbox" id="musculacao" name="musculacao" value="musculacao" required>
-            <label for="musculacao">Musculação</label>
-        <br>
+                    <label for="peso">Peso:</label>
+                    <input type="number" step="0.1" id="peso" value="peso" required>
+                    <br><br>
 
-        <input type="checkbox" id="pilates" name="pilates" value="pilates" required>
-            <label for="pilates">Pilates</label><br>
+                    <h3>Escolha o Plano:</h3>
+                    <input type="radio" id="mensal" name="mensal" value="mensal" required>
+                    <label for="mensal">Mensal</label>
+                    <br>
 
-        <input type="checkbox" id="spinning" name="spinning" value="spinning" required>
-            <label for="spinning">Spinning</label>
-        <br>
+                    <input type="radio" id="trimestral" name="trimestral" value="trimestral" required>
+                    <label for="trimestral">Trimestral</label>
+                    <br>
 
-        <input type="checkbox" id="natacao" name="natacao" value="natacao" required>
-            <label for="natacao">Natação</label>
-        <br>
+                    <input type="radio" id="anual" name="anual" value="anual" required>
+                    <label for="anual">Anual</label>
+                    <br>
 
+                    <h2>Modalidades:</h2>
+                    <input type="checkbox" id="musculacao" name="musculacao" value="musculacao" required>
+                    <label for="musculacao">Musculação</label>
+                    <br>
+
+                    <input type="checkbox" id="pilates" name="pilates" value="pilates" required>
+                    <label for="pilates">Pilates</label><br>
+
+                    <input type="checkbox" id="spinning" name="spinning" value="spinning" required>
+                    <label for="spinning">Spinning</label>
+                    <br>
+
+                    <input type="checkbox" id="natacao" name="natacao" value="natacao" required>
+                    <label for="natacao">Natação</label>
+                    <br><br>
+
+                    <label for="horario">Horário de preferência:</label>
+                    <input type="time" id="horario" name="horario" value="horario" max="22:00" min="6:00">
+                    <br></br>
+                    
+                    <!--Pois mesmo que o codigo esta com a ESTRUTURA errada nao irá afetar em nada-->
+                    
+                    <br>
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" value="" required minlength="8">
+                    <br><br>
+
+                    <label for="confirmarSenha">Confirmar Senha:</label>
+                    <input type="password" id="confirmarSenha" name="confirmarSenha" value="" required minlength="8">
+                    <br><br><br>
+
+                    <button>Enviar</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
 
 </body>
+
 </html>
