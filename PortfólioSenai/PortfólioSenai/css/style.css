@@ -1,61 +1,113 @@
-/*#011638 texto*/
-/*#364156 detalhe*/
-/*FFFFFF fundo*/
-/*E2B4BD destaque*/
+/* #011638 texto */
+/* #364156 detalhe */
+/* #FFFFFF fundo */
+/* #E2B4BD destaque */
+
 * {
     box-sizing: border-box;
 }
 
+:root {
+    --cor-suave: #6ea57c;
+    --cor-destaque: #FF6347;
+}
+
 body {
     margin: 0;
-
-    font-family: "Raleway", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     line-height: 1.6;
+}
 
-    h1 {
-        font-size: 2.5rem;
-    }
+header {
+    background-color: #6ea57c;
+    color: #000000;
+    padding: 24px;
+}
 
-    h2 {
-        font-size: 1.75rem;
-    }
+h1 {
+    font-size: 2.5rem;
+}
 
-    h3 {
-        font-size: 1.25rem;
-    }
+h2 {
+    font-size: 1.75rem;
+}
 
-    header {
-        background-color: #98B9F2;
-        color: #011638;
-        padding: 24px;
-        
-    }
+h3 {
+    font-size: 1.25rem;
+}
 
-    main {
-        width: 900px;
-        max-width: 500 px;
-        margin: 0 auto;
-        padding: 16px;
-    }
+main {
+    width: 900px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 16px;
+}
 
-    nav {
-        text-decoration: none;
-        color: #394053;
-    }
+nav a {
+    text-decoration: none;
+    color: #000000;
+}
 
-    nav:hover {
-        color: #011638;
-        padding: 8 px 12px;
-        border-radius: 6px;
-        list-style: none;
-    }
+nav a:hover {
+    color: #000000;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: rgba(144, 241, 161, 0.986);
+}
 
-    nav a:link, nav a:visited{
-        display: inline-block;
-    }
+nav a:link,
+nav a:visited {
+    display: inline-block;
+}
 
-    footer {
-        background-color: #98B9F2;
-    }
+tbody tr:nth-child(even) {
+    background: var(--cor-suave);
+}
+
+li::before {
+    list-style: none;
+    content: " ✓ ";
+}
+
+li {
+    list-style: none;
+}
+
+li:not(:last-child) {
+    border-left: 2px solid rgb(243, 243, 243);
+}
+
+.menu a {
+    position: relative;
+    text-decoration: none;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: var(--cor-destaque);
+    transition: width 0.3s;
+}
+
+.menu a:hover::after,
+.menu a.ativo::after {
+    width: 100%;
+}
+
+.projetos article {
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.projetos article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+    background-color: #6ea57c;
 }
